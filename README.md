@@ -1,4 +1,6 @@
 # Build In Public - Modern Simple Next.js 14 Ecommerce
+>An open-source source, build in public project. An e-commerce platform to support multiple vendors and customers.
+<img src="https://github.com/Triv2/Triv2/assets/126743500/224f17ee-f3fc-452d-8984-9e80b4ce73cc" alt="projectimage" width="800" height="400" />
 
 ## Introduction
 
@@ -6,9 +8,9 @@ Goal is to create a modern simple ecommerce platform similar to shopify but with
 
 The finished project will have a backend with a landing page where small business owners can sign-up/login to their content management systems for their stores.
 
-Ideally each store that gets created should have their own distinct URL, however some users would rather the platform handle that aspect. Will try to implement both features, allowing the user to determine if they want their store to be `/app/[storeName]`. 
+Ideally each store that gets created should have their own distinct URL, however some users would rather the platform handle that aspect. Will try to implement both features, allowing the user to determine if they want their store to be `/app/market/[storeName]`. 
 
-Since we are using Simpec as the fake business name it would be `simpec.com/MyStore` for the platform hosted ones, or similar. We can also set it up to where Simpec can promote small businesses on a frontpage banner.
+Since we are using Simpec as the fake business name it would be `simpec.com/market/MyStore` for the platform hosted ones, or similar. We can also set it up to where Simpec can promote small businesses on a frontpage banner.
 
 *This is a general idea, it is most likely going to change as the project gets built. The main thing is getting the core concept in place.*
 
