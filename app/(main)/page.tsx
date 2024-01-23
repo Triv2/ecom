@@ -6,6 +6,10 @@ import StatBanner from "./_components/stat-banner";
 import FeatureBanner from "./_components/feature-banner";
 import About from "./_components/about";
 import Setup from "./_components/setup";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import Contact from "./_components/contact";
 
 const LandingPage = async () => {
   const user = (await currentUser()) || null;
@@ -24,11 +28,19 @@ const LandingPage = async () => {
                 Simple E-Commerce
               </h1>
             </div>
-            <p></p>
+            
             <h3 className=" pl-5 text-xl sm:text-2xl md:text-start text-center font-serif font-semibold text-sky-100">
               An easy to use e-commerce platform to suit all small business
               needs
             </h3>
+            <div className="md:pl-20 pt-5">
+            <Button size="lg" asChild>
+              <Link className="text-xl bg-gradient-to-br from-blue-500 via-sky-300/50 md:text-start font-bold  z-10
+              text-center to-emerald-200/70   drop-shadow-2xl hover:scale-105 transition-all " href="/sign-up">
+                Get Started for Free <ArrowRight className=""/>
+              </Link>
+           </Button>
+            </div>
           </div>
 
           <div className="custom-shape-divider-bottom-1705848015 ">
@@ -90,7 +102,7 @@ const LandingPage = async () => {
       <div className=" h-full w-full">
         <Setup />
       </div>
-      <div className=" h-full w-full">Contact section</div>
+      <div className=" h-full w-full px-3 md:p-10 pb-10 "><Contact/></div>
 
       <Footer />
     </div>

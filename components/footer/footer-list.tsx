@@ -9,7 +9,7 @@ const FooterList = ({ title, links }: FooterListProps) => {
   return (
     <div className="flex flex-col items-center justify-center">
       <p>{title}</p>
-      <div className="flex flex-col items-center justify-center gap-1 pt-1">
+      <div className="flex flex-col items-center justify-center gap-2 pt-1">
         {links.map((link, index) => (
           <Link
             href={link}

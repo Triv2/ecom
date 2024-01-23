@@ -14,7 +14,7 @@ const FeatureBanner = () => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col items-center justify-center">
-        <h3 className="font-bold font-sans text-3xl">Supports </h3>
+        <h3 className="font-bold font-sans text-slate-800  text-3xl">Supports </h3>
         <section className="flex items-center justify-center p-3 gap-3  flex-wrap ">
           <Feature
             title="Small Business"
@@ -40,7 +40,7 @@ const FeatureBanner = () => {
         </section>
       </div>
       <div className="flex flex-col items-center justify-center">
-        <h3 className="font-bold font-sans text-3xl">Benefits</h3>
+        <h3 className="font-bold font-sans text-slate-800  text-3xl">Benefits</h3>
         <section className="flex items-center justify-center p-3 gap-3  flex-wrap ">
           <Feature
             title="Online Presence"
