@@ -18,7 +18,7 @@ const AboutCard = ({ icon, title, description, className }: AboutCardProps) => {
     <section className="flex flex-col items-center  w-full lg:w-[30%]  rounded-md p-2 gap-5">
       <article className={className}>
         <div className=" min-h-[100%] rounded-md bg-gradient-to-br from-slate-400/20 via-slate-800/30 to-slate-400/20">
-          <div className="w-full  flex gap-5 items-center bg-slate-800/90  shadow-md  px-4 rounded-t-md p-2">
+          <div className="w-full  flex gap-5 items-center bg-slate-900/70    px-4 rounded-t-md p-2">
             {icon}
             <h3
               className={cn(
@@ -29,8 +29,8 @@ const AboutCard = ({ icon, title, description, className }: AboutCardProps) => {
               {title}
             </h3>
           </div>
-          <div className="min-h-[100px] min-w-[100px] bg-slate-500/20 "></div>
-          <p className="text-white font-semibold bg-slate-500/20  text-xl font-sans p-2 py-10">
+          <div className="min-h-[100px] min-w-[100px] bg-slate-900/70  "></div>
+          <p className="text-white font-semibold bg-slate-900/70  rounded-b-md text-xl font-sans p-2  px-4 py-10">
             {description}
           </p>
         </div>

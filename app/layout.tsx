@@ -6,14 +6,15 @@ import { ClerkProvider } from "@clerk/nextjs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Simpec, Simple E-commerce Store",
-  description: "An easy to use e-commerce platform to suit all small business needs.",
+  title: "Simple E-C, Simple E-commerce Store",
+  description:
+    "An easy to use e-commerce platform to suit all small business needs.",
   icons: [
     {
       url: "/logo.png",
       href: "/logo.png",
     },
-  ]
+  ],
 };
 
 export default function RootLayout({
@@ -23,9 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+      <html lang="en">
+        <body className={inter.className}>{children}</body>
+      </html>
     </ClerkProvider>
   );
 }

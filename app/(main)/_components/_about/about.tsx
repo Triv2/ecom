@@ -30,7 +30,7 @@ const About = () => {
           description="We have an in-built store designer that simplifies and speeds up
         the process of building an online e-commerce store."
           icon={
-            <Brush className="text-red-400 bg-slate-700/50 rounded-md p-2 h-11 w-11" />
+            <Brush className="text-red-400 bg-slate-900/50 rounded-md p-2 h-11 w-11" />
           }
         />
         <AboutCard
@@ -39,7 +39,7 @@ const About = () => {
           description="We provide you with a simple and easy to use content management
         system to build your products and design your store."
           icon={
-            <Combine className="text-orange-400 bg-slate-700/50 rounded-md p-2 h-11 w-11" />
+            <Combine className="text-orange-400 bg-slate-900/50 rounded-md p-2 h-11 w-11" />
           }
         />
         <AboutCard
@@ -48,7 +48,7 @@ const About = () => {
           description="Data analytics are embedded into the foundation of the system
         allowing you to track the performance of your business."
           icon={
-            <BarChart3 className="text-orange-400 bg-slate-700/50 rounded-md p-2 h-11 w-11" />
+            <BarChart3 className="text-orange-400 bg-slate-900/50 rounded-md p-2 h-11 w-11" />
           }
         />
 

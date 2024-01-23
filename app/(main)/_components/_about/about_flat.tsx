@@ -17,7 +17,7 @@ const AboutFlat = ({ icon, title, description, className }: AboutFlatProps) => {
     <section className="flex md:flex-row flex-col items-center w-full  lg:w-[30%]  rounded-md p-2 gap-5">
       <article className={className}>
         <div className="bg-slate-800/20 min-h-[100%]">
-          <div className="w-full h-full bg-gradient-to-br from-slate-400/20 via-slate-800/30 to-slate-400/20 py-5  rounded-md p-2">
+          <div className="w-full h-full bg-gradient-to-br from-slate-900/50 via-slate-800/70 to-slate-900/50 py-5  rounded-md p-2">
             <div className="flex items-center gap-5">
               {icon}
               <h3
