@@ -4,12 +4,17 @@ import { cn } from "@/lib/utils";
 
 const font = Poppins({
   subsets: ["latin"],
-  weight: ["400", "700"]
+  weight: ["400", "700"],
 });
 const Setup = () => {
   return (
     <section className="p-3">
-      <h3 className={cn("text-3xl text-center tracking-tight font-bold text-slate-800  pb-5",font.className)}>
+      <h3
+        className={cn(
+          "text-3xl text-center tracking-tight font-bold text-slate-800  pb-5",
+          font.className
+        )}
+      >
         Setup
       </h3>
 

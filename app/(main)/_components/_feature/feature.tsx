@@ -12,7 +12,9 @@ h-[200px] w-[200px] flex items-center justify-evenly p-2 flex-col shadow-md"
     >
       <div className="flex items-center justify-center h-[30%]  ">{icon}</div>
       <div className="flex flex-col  justify-start gap-2 h-[70%] ">
-        <h3 className="text-xl font-sans text-slate-800  text-center font-bold">{title}</h3>
+        <h3 className="text-xl font-sans text-slate-800  text-center font-bold">
+          {title}
+        </h3>
         <p className="text-sm font-serif text-muted-foreground ">
           {description}
         </p>

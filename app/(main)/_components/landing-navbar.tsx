@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const font = Poppins({
   subsets: ["latin"],
-  weight: ["400", "700"]
+  weight: ["400", "700"],
 });
 
 const LandingNavbar = async () => {

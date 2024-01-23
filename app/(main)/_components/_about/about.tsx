@@ -1,17 +1,10 @@
-import {
-  BarChart3,
-  Brush,
-  Cast,
-  Combine,
-  Feather,
-  LineChart,
-} from "lucide-react";
-import Image from "next/image";
+import { BarChart3, Brush, Cast, Combine, Feather } from "lucide-react";
+
 import AboutCard from "./about_card";
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import AboutFlat from "./about_flat";
-interface AboutProps {}
+
 
 const font = Poppins({
   subsets: ["latin"],
