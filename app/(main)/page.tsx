@@ -1,15 +1,22 @@
 import { currentUser } from "@clerk/nextjs";
+import { Poppins } from "next/font/google";
 
 import LandingNavbar from "./_components/landing-navbar";
 import { Footer } from "../../components/footer/footer";
-import StatBanner from "./_components/stat-banner";
-import FeatureBanner from "./_components/feature-banner";
-import About from "./_components/about";
-import Setup from "./_components/setup";
+import StatBanner from "./_components/_stats/stat-banner";
+import FeatureBanner from "./_components/_feature/feature-banner";
+import About from "./_components/_about/about";
+import Setup from "./_components/_setup/setup";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Contact from "./_components/contact";
+import { cn } from "@/lib/utils";
+
+const font = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"]
+});
 
 const LandingPage = async () => {
   const user = (await currentUser()) || null;
@@ -22,8 +29,7 @@ const LandingPage = async () => {
           <div className="h-full w-full bg-slate-800/60  flex flex-col px-2 md:pl-20 justify-center pb-10">
             <div className=" w-full ">
               <h1
-                className=" text-5xl  font-bold  sm:text-6xl lg:7xl xl:text-8xl  
-            bg-gradient-to-br from-blue-500/80 md:text-start text-center to-emerald-200/90 bg-clip-text text-transparent drop-shadow-2xl"
+                className={cn("text-5xl font-bold sm:text-6xl tracking-tight lg:7xl xl:text-8xl bg-gradient-to-br from-blue-500/80 md:text-start text-center to-emerald-200/90 bg-clip-text text-transparent drop-shadow-2xl", font.className)}
               >
                 Simple E-Commerce
               </h1>
@@ -35,9 +41,8 @@ const LandingPage = async () => {
             </h3>
             <div className="md:pl-20 pt-5">
             <Button size="lg" asChild>
-              <Link className="text-xl bg-gradient-to-br from-blue-500 via-sky-300/50 md:text-start font-bold  z-10
-              text-center to-emerald-200/70   drop-shadow-2xl hover:scale-105 transition-all " href="/sign-up">
-                Get Started for Free <ArrowRight className=""/>
+              <Link className={cn("text-xl bg-gradient-to-br from-blue-500 via-sky-300/50 md:text-start    z-10 text-center to-emerald-200/70  drop-shadow-2xl hover:scale-105 hover:text-sky-200 transition-all ")} href="/sign-up">
+               <p className={cn(" tracking-tight",font.className)}> Get Started for Free</p> <ArrowRight className=""/>
               </Link>
            </Button>
             </div>

@@ -3,12 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import localFont from "next/font/local";
+import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-// const headingFont = localFont({
-//   src: "",
-// });
+const font = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"]
+});
 
 const LandingNavbar = async () => {
   const user = (await currentUser()) || null;
@@ -20,11 +21,11 @@ const LandingNavbar = async () => {
           <Image src="/logo.png" width={50} height={50} alt="logo" />
           <p
             className={cn(
-              "font-bold text-md md:text-2xl font-sans bg-gradient-to-br from-blue-500  to-emerald-300 bg-clip-text text-transparent"
-              // headingFont.className
+              "font-bold text-md md:text-xl tracking-tight font-sans bg-gradient-to-br from-blue-500  to-emerald-300 bg-clip-text text-transparent",
+              font.className
             )}
           >
-            Simpec
+            Simple E-C
           </p>
         </Link>
       ) : (
@@ -35,11 +36,11 @@ const LandingNavbar = async () => {
           <Image src="/logo.png" width={40} height={40} alt="logo" />
           <p
             className={cn(
-              "font-bold text-md md:text-2xl font-sans bg-gradient-to-r from-sky-500  to-slate-300 bg-clip-text text-transparent"
-              // headingFont.className
+              "font-bold text-md md:text-xl font-sans bg-gradient-to-r from-sky-500  to-slate-300 bg-clip-text text-transparent",
+              font.className
             )}
           >
-            Simpec
+            Simple E-C
           </p>
         </Link>
       )}

@@ -7,14 +7,19 @@ import {
   Warehouse,
 } from "lucide-react";
 import Feature from "./feature";
+import { Poppins } from "next/font/google";
+import { cn } from "@/lib/utils";
 
-interface FeatureBannerProps {}
+const font = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"]
+});
 
 const FeatureBanner = () => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col items-center justify-center">
-        <h3 className="font-bold font-sans text-slate-800  text-3xl">Supports </h3>
+        <h3 className={cn("font-bold font-sans tracking-tight text-slate-800  text-3xl",font.className)}>Supports </h3>
         <section className="flex items-center justify-center p-3 gap-3  flex-wrap ">
           <Feature
             title="Small Business"
@@ -40,7 +45,7 @@ const FeatureBanner = () => {
         </section>
       </div>
       <div className="flex flex-col items-center justify-center">
-        <h3 className="font-bold font-sans text-slate-800  text-3xl">Benefits</h3>
+      <h3 className={cn("font-bold font-sans text-slate-800 tracking-tight text-3xl",font.className)}>Benefits</h3>
         <section className="flex items-center justify-center p-3 gap-3  flex-wrap ">
           <Feature
             title="Online Presence"

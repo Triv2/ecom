@@ -17,7 +17,7 @@ export const Logo = () => {
       <p className={cn("font-bold text-md md:text-2xl font-sans bg-gradient-to-br from-blue-500  to-emerald-300 bg-clip-text text-transparent sm:flex hidden ",
       //logoFont.className
       )}>
-        Simpec</p>
+        Simple E-C</p>
         </div>
     </Link>
   )
