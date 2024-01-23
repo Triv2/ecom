@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Build In Public - Modern Simple Next.js 14 Ecommerce
+>An open-source source, build in public project. An e-commerce platform to support multiple vendors and customers.
+<img src="https://github.com/Triv2/Triv2/assets/126743500/224f17ee-f3fc-452d-8984-9e80b4ce73cc" alt="projectimage" width="800" height="400" />
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+Goal is to create a modern simple ecommerce platform similar to shopify but without all the fancy features. Going to try and minimize the number of packages/libraries used, if we can do it ourselves we will. This in my opinion is the best way to learn.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The finished project will have a backend with a landing page where small business owners can sign-up/login to their content management systems for their stores.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ideally each store that gets created should have their own distinct URL, however some users would rather the platform handle that aspect. Will try to implement both features, allowing the user to determine if they want their store to be `/app/market/[storeName]`. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Since we are using Simpec as the fake business name it would be `simpec.com/market/MyStore` for the platform hosted ones, or similar. We can also set it up to where Simpec can promote small businesses on a frontpage banner.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+*This is a general idea, it is most likely going to change as the project gets built. The main thing is getting the core concept in place.*
 
-## Learn More
+## Stack
+- Clerk: This is the best option for authentication for our needs. Customers will only have to login when they make a purchase, and can only leave a review after a making a purchase. Business owners will be able to login to access the CMS. 
+- Next.js 14: Best for performance reasons, and to learn more about it.
+- Shadcn-ui: Simple easy to use, will be customizing many components and building them from scratch where possible. But at the same time, will use a shadcn component if it saves time. 
+- Prisma ORM: Simple, no need for anything crazy.
+- Stripe: Using this for payment processing, will add it last. Can optionally add a different payment processor if enough people request it
+- Uploadthing: Easy image upload for the products
+- Database: Will be using  SQL database for this project, CockroachDB, NeonDB, PlanetScale, and etc will work fine. 
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
+- Admin CMS for CRUD: products, categories, subcategories, orders, cart
+	- After minimum viable product this can be extended.
+- Landing page based on modern e-commerce style websites(shopify)
+	-Sleek, minimalist, and simple.
+- Front-end: Business Contact Form, About Section, Featured Products, Best-Selling Products, Sales Banner, categories and subcategories, reviews
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Timeline
+*Starting with a front-end first approach, designing the landing page first then moving towards the CMS*
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. First commit will be baseline install of next 14, shadcn-ui, and clerk. Using TailwindCSS-Animated for some simple animations on the landing page. Also will be used to make transitions in the CMS for smoother use.
+	
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. Additional will be committing most of the landing page in the first commit. Will try to finish it with second commit
+	
+		
