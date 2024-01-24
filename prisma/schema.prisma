@@ -1,0 +1,106 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "cockroachdb"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  CUSTOMER
+  OWNER
+  ADMIN
+}
+
+
+model Customer{
+  id       String @id @default(uuid())
+  clerkId String
+  name String 
+  role Role @default(CUSTOMER)
+
+ 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Owner{
+  id       String @id @default(uuid())
+  clerkId String
+  name String 
+  role Role @default(OWNER)
+
+  stores Store[]
+
+ 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Store {
+  id       String @id @default(uuid())
+  name String @unique
+  description String 
+
+  ownerId  String 
+  owner Owner @relation(fields: [ownerId], references: [id])
+
+  categories Category[]
+
+
+ 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Category {
+  id       String @id @default(uuid())
+  title String
+  descriptions String
+  imageUrl String
+
+  storeId String
+  store Store @relation(fields: [storeId], references: [id])
+
+  subcategories Subcategory[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Subcategory {
+  id       String @id @default(uuid())
+  title String
+  description String
+  imageUrl String
+
+  categoryId String
+  category Category @relation(fields: [categoryId], references: [id])
+
+  products Product[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Product {
+  id       String @id @default(uuid())
+  title String
+  description String
+  imageUrl  String
+
+  subcategoryId String
+  subcategory Subcategory @relation(fields: [subcategoryId], references: [id])
+
+  quantity Int
+  sizes String[]
+
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
