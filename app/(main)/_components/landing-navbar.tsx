@@ -47,6 +47,9 @@ const LandingNavbar = async () => {
 
       {!user ? (
         <div className="flex items-center justify-center gap-2 ">
+         <Button variant="nav" asChild>
+            <Link href="/market">Market</Link>
+          </Button>
           <Button variant="nav" asChild>
             <Link href="/sign-in">Login</Link>
           </Button>

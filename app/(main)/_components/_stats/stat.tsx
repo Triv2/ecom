@@ -1,3 +1,4 @@
+import AnimationOnScroll from "@/components/animation-on-scroll";
 import { cn } from "@/lib/utils";
 import { Poppins } from "next/font/google";
 
@@ -14,14 +15,19 @@ const Stat = ({ title, description }: StatProps) => {
   return (
     <article className="bg-gradient-to-b from-sky-500 to-slate-200 pl-2 flex flex-col ">
       <div className="flex flex-col justify-center pl-5 w-full h-full bg-white gap-1">
+        <AnimationOnScroll
+        classNameInView="animate-fade-up animate-once animate-ease-out animate-fill-forwards"
+        classNameNotInView=""
+        >
         <h3
           className={cn(
-            "font-bold text-slate-800 tracking-tight text-4xl",
+            "font-bold text-slate-800 tracking-tight text-4xl ",
             font.className
           )}
         >
           {title}
         </h3>
+        </AnimationOnScroll>
         <p className="text-muted-foreground pl-1">{description}</p>
       </div>
     </article>
