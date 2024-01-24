@@ -5,6 +5,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { Menu } from "lucide-react";
+import NavActions from "@/components/navigation/nav-actions";
+import MobileNavbar from "@/components/navigation/mobile-navbar";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -46,14 +49,13 @@ const LandingNavbar = async () => {
       )}
 
       {!user ? (
-        <div className="flex items-center justify-center gap-2 ">
-         <Button variant="nav" asChild>
-            <Link href="/market">Market</Link>
-          </Button>
-          <Button variant="nav" asChild>
-            <Link href="/sign-in">Login</Link>
-          </Button>
-          <UserButton afterSignOutUrl="/" />
+        <div >
+          <section className="sm:flex  hidden z-10">
+        <NavActions/>
+        </section>
+        <section className="flex sm:hidden">
+        <MobileNavbar/>
+        </section>
         </div>
       ) : (
         <div>
