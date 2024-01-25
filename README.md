@@ -10,7 +10,7 @@ The finished project will have a backend with a landing page where small busines
 
 Ideally each store that gets created should have their own distinct URL, however some users would rather the platform handle that aspect. Will try to implement both features, allowing the user to determine if they want their store to be `/app/market/[storeName]`. 
 
-Since we are using Simpec as the fake business name it would be `simpec.com/market/MyStore` for the platform hosted ones, or similar. We can also set it up to where Simpec can promote small businesses on a frontpage banner.
+Since we are using Simple E-C as the fake business name it would be `simplec.com/market/MyStore` for the platform hosted ones, or similar. We can also set it up to where Simpec can promote small businesses on a frontpage banner.
 
 *This is a general idea, it is most likely going to change as the project gets built. The main thing is getting the core concept in place.*
 
