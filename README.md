@@ -37,7 +37,9 @@ Since we are using Simpec as the fake business name it would be `simpec.com/mark
 
 1. First commit will be baseline install of next 14, shadcn-ui, and clerk. Using TailwindCSS-Animated for some simple animations on the landing page. Also will be used to make transitions in the CMS for smoother use.
 	
-
 2. Additional will be committing most of the landing page in the first commit. Will try to finish it with second commit
-	
+
+3. Added TailwindCSS-Animated, and react-intersection-observer for extended animations and animation on scroll. These will be used for subtle animations and transition effects.
+
+
 		
