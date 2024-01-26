@@ -10,7 +10,7 @@ The finished project will have a backend with a landing page where small busines
 
 Ideally each store that gets created should have their own distinct URL, however some users would rather the platform handle that aspect. Will try to implement both features, allowing the user to determine if they want their store to be `/app/market/[storeName]`. 
 
-Since we are using Simpec as the fake business name it would be `simpec.com/market/MyStore` for the platform hosted ones, or similar. We can also set it up to where Simpec can promote small businesses on a frontpage banner.
+Since we are using Simple E-C as the fake business name it would be `simplec.com/market/MyStore` for the platform hosted ones, or similar. We can also set it up to where Simpec can promote small businesses on a frontpage banner.
 
 *This is a general idea, it is most likely going to change as the project gets built. The main thing is getting the core concept in place.*
 
@@ -37,7 +37,9 @@ Since we are using Simpec as the fake business name it would be `simpec.com/mark
 
 1. First commit will be baseline install of next 14, shadcn-ui, and clerk. Using TailwindCSS-Animated for some simple animations on the landing page. Also will be used to make transitions in the CMS for smoother use.
 	
-
 2. Additional will be committing most of the landing page in the first commit. Will try to finish it with second commit
-	
+
+3. Added TailwindCSS-Animated, and react-intersection-observer for extended animations and animation on scroll. These will be used for subtle animations and transition effects.
+
+
 		
