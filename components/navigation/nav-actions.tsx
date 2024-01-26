@@ -4,6 +4,7 @@ import { Button } from '../ui/button';
 import Link from 'next/link';
 import { UserButton } from '@clerk/nextjs';
 
+
 interface NavActionsProps {}
 
 const NavActions:React.FC<NavActionsProps> = () => {
@@ -21,14 +22,12 @@ return null;
     
     <div className="sm:flex-row flex flex-col items-center justify-center gap-2 ">
      <Button variant="nav" asChild>
-        <Link href="/market">Market</Link>
-      </Button>
-      <Button variant="nav" asChild>
-        <Link href="/stores">Stores</Link>
+        <Link href="/about">About</Link>
       </Button>
       <Button variant="nav" asChild>
         <Link href="/sign-in">Login</Link>
       </Button>
+     
       <UserButton afterSignOutUrl="/" />
     </div>
    

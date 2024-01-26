@@ -17,7 +17,7 @@ const font = Poppins({
   weight: ["400", "700"],
 });
 
-const LandingNavbar = async () => {
+const Navbar = async () => {
   const user = (await currentUser()) || null;
 
   return (
@@ -78,11 +78,8 @@ const LandingNavbar = async () => {
       )}
      
     </nav>
-    <CategoryBar/>
-    <div className="px-10 rounded-b-md">
-      <FilterBar />
-      </div>
+   
     </div>
   );
 };
-export default LandingNavbar;
+export default Navbar;

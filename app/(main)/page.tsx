@@ -15,6 +15,9 @@ import { cn } from "@/lib/utils";
 import DividerOne from "./_components/_dividers/divider-one";
 import DividerTwo from "./_components/_dividers/divider-two";
 import DividerThree from "./_components/_dividers/divider_three";
+import CategoryBar from "@/components/navigation/category-bar";
+import Image from "next/image";
+import FilterBar from "@/components/navigation/filterbar";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -26,65 +29,139 @@ const LandingPage = async () => {
   return (
     <div className=" w-full min-h-screen h-auto flex flex-col justify-between  ">
       <LandingNavbar />
-      <section className="relative  w-full     ">
-        <div className="relative  h-[550px]  w-full bg-[url(/landing/lbg.png)]  bg-no-repeat bg-cover bg-fixed bg-center pt-10">
-          <div className="h-full w-full bg-slate-800/60  flex flex-col px-2 md:pl-20 justify-center pb-10">
-            <div className=" w-full ">
-              <h1
+      
+      <section className="relative w-full pt-[10rem]">
+        <div className="relative  h-auto w-full bg-[url(/testbg.png)]  bg-no-repeat bg-cover bg-scroll bg-center ">
+          <DividerTwo />
+          <div className="h-auto w-full bg-slate-800/60  flex flex-col px-20  justify-center pb-10">
+            <div className="w-full h-full mt-5 p-5 bg-slate-200/90 rounded-md z-10 flex items-center flex-col gap-3 px-20 pt-20 pb-20">
+              <h2
                 className={cn(
-                  "text-5xl font-bold sm:text-6xl tracking-tight lg:7xl xl:text-8xl bg-gradient-to-br from-blue-500/80 md:text-start text-center to-emerald-200/90 bg-clip-text text-transparent drop-shadow-2xl",
+                  "font-bold tracking-tight text-slate-900 text-4xl",
                   font.className
                 )}
               >
-                Simple E-Commerce
-              </h1>
+                Click something below!
+              </h2>
+              <article className="flex items-center gap-5 justify-between">
+                <div className="grid grid-cols-3 gap-1">
+                  <div className="w-full h-full bg-zinc-200 rounded-md shadow-md p-3">
+                    <h2> Product</h2>
+                    <Image
+                      src="/landing/setup1.webp"
+                      alt="product"
+                      height={150}
+                      width={150}
+                    />
+                  </div>
+                  <div className="w-full h-full bg-zinc-200 rounded-md shadow-md p-3">
+                    <h2> Product</h2>
+                    <Image
+                      src="/landing/setup1.webp"
+                      alt="product"
+                      height={150}
+                      width={150}
+                    />
+                  </div>
+                  <div className="w-full h-full bg-zinc-200 rounded-md shadow-md p-3">
+                    <h2> Product</h2>
+                    <Image
+                      src="/landing/setup1.webp"
+                      alt="product"
+                      height={150}
+                      width={150}
+                    />
+                  </div>
+                  <div className="w-full h-full bg-zinc-200 rounded-md shadow-md p-3">
+                    <h2> Product</h2>
+                    <Image
+                      src="/landing/setup1.webp"
+                      alt="product"
+                      height={150}
+                      width={150}
+                    />
+                  </div>
+                  <div className="w-full h-full bg-zinc-200 rounded-md shadow-md p-3">
+                    <h2> Product</h2>
+                    <Image
+                      src="/landing/setup1.webp"
+                      alt="product"
+                      height={150}
+                      width={150}
+                    />
+                  </div>
+                  <div className="w-full h-full bg-zinc-200 rounded-md shadow-md p-3">
+                    <h2> Product</h2>
+                    <Image
+                      src="/landing/setup1.webp"
+                      alt="product"
+                      height={150}
+                      width={150}
+                    />
+                  </div>
+                  <div className="w-full h-full bg-zinc-200 rounded-md shadow-md p-3">
+                    <h2> Product</h2>
+                    <Image
+                      src="/landing/setup1.webp"
+                      alt="product"
+                      height={150}
+                      width={150}
+                    />
+                  </div>
+                  <div className="w-full h-full bg-zinc-200 rounded-md shadow-md p-3">
+                    <h2> Product</h2>
+                    <Image
+                      src="/landing/setup1.webp"
+                      alt="product"
+                      height={150}
+                      width={150}
+                    />
+                  </div>
+                  <div className="w-full h-full bg-zinc-200 rounded-md shadow-md p-3">
+                    <h2> Product</h2>
+                    <Image
+                      src="/landing/setup1.webp"
+                      alt="product"
+                      height={150}
+                      width={150}
+                    />
+                  </div>
+                </div>
+                <div className="flex items-center justify-center flex-col gap-1">
+                  <div className="w-full h-full bg-zinc-200 rounded-md shadow-md p-3">
+                    <h2> Product</h2>
+                    <Image
+                      src="/landing/setup1.webp"
+                      alt="product"
+                      height={150}
+                      width={150}
+                    />
+                  </div>
+                  <div className="w-full h-full bg-zinc-200 rounded-md shadow-md p-3">
+                    <h2> Product</h2>
+                    <Image
+                      src="/landing/setup1.webp"
+                      alt="product"
+                      height={150}
+                      width={150}
+                    />
+                  </div>
+                  <div className="w-full h-full bg-zinc-200 rounded-md shadow-md p-3">
+                    <h2> Product</h2>
+                    <Image
+                      src="/landing/setup1.webp"
+                      alt="product"
+                      height={150}
+                      width={150}
+                    />
+                  </div>
+                </div>
+              </article>
             </div>
-
-            <h3 className=" pl-5 text-xl sm:text-2xl md:text-start text-center font-serif font-semibold text-sky-100">
-              An easy to use e-commerce platform to suit all small business
-              needs
-            </h3>
-            <div className="md:pl-20 pt-5">
-              <Button size="lg" asChild>
-                <Link
-                  className={cn(
-                    "text-xl bg-gradient-to-br from-blue-500 via-sky-300/50 md:text-start  z-10 text-center to-emerald-200/70  drop-shadow-2xl hover:scale-105 hover:text-sky-200 transition-all "
-                  )}
-                  href="/sign-up"
-                >
-                  <p className={cn(" tracking-tight", font.className)}>
-                    {" "}
-                    Get Started for Free
-                  </p>{" "}
-                  <ArrowRight className="" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-          <DividerOne />
-        </div>
-      </section>
-      <div className="h-full w-full py-2">
-        <StatBanner />
-      </div>
-      <div className="h-full w-full pb-10">
-        <FeatureBanner />
-      </div>
-      <section className="relative w-full">
-        <div className="relative  h-auto  w-full bg-[url(/landing/lbg.png)]  bg-no-repeat bg-cover bg-fixed bg-center ">
-          <DividerTwo />
-          <div className="h-full w-full bg-slate-800/60  flex flex-col px-2  justify-center pb-10">
-            <About />
           </div>
           <DividerThree />
         </div>
       </section>
-      <div className=" h-full w-full">
-        <Setup />
-      </div>
-      <div className=" h-full w-full px-3 md:p-10 pb-10 ">
-        <Contact />
-      </div>
       <Footer />
     </div>
   );
