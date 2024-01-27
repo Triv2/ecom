@@ -41,5 +41,7 @@ Since we are using Simple E-C as the fake business name it would be `simplec.com
 
 3. Added TailwindCSS-Animated, and react-intersection-observer for extended animations and animation on scroll. These will be used for subtle animations and transition effects.
 
+4. Improve the overall design, give the current implementation of Clerk a facelift by replacing most clerk components with a custom implementation. [ Require First/Last Name in Clerk ]
+
 
 		
