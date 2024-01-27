@@ -11,6 +11,7 @@ import MobileNavbar from "@/components/navigation/mobile-navbar";
 import { Searchbar } from "@/components/navigation/searchbar";
 import CategoryBar from "@/components/navigation/category-bar";
 import FilterBar from "@/components/navigation/filterbar";
+import {UserNav} from "@/components/navigation/user-nav";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -64,15 +65,18 @@ const LandingNavbar = async () => {
       ) : (
         <div>
           <div className="flex justify-between items-center w-full gap-2">
-            <UserButton
-              afterSignOutUrl="/"
-              appearance={{
-                elements: {
-                  userButtonPopoverCard: "pointer-events-auto",
-                  userButtonAvatarBox: "h-6 w-6",
-                },
-              }}
-            />
+            {/*<UserButton*/}
+            {/*  afterSignOutUrl="/"*/}
+            {/*  appearance={{*/}
+            {/*    elements: {*/}
+            {/*      userButtonPopoverCard: "pointer-events-auto",*/}
+            {/*      userButtonAvatarBox: "h-6 w-6",*/}
+            {/*    },*/}
+            {/*  }}*/}
+            {/*/>*/}
+
+              <UserNav/>
+
           </div>
         </div>
       )}
