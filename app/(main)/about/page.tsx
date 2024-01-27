@@ -68,11 +68,11 @@ const LandingPage = async () => {
       <div className="h-full w-full py-2">
         <StatBanner />
       </div>
-      <div className="h-full w-full pb-10">
+      <div className="h-full w-full pb-20">
         <FeatureBanner />
       </div>
       <section className="relative w-full">
-        <div className="relative  h-auto  w-full bg-[url(/landing/lbg.png)]  bg-no-repeat bg-cover bg-fixed bg-center ">
+        <div className="relative  h-auto  w-full bg-[url(/landing/lbg.png)]   bg-no-repeat bg-cover bg-fixed bg-center ">
           <DividerTwo />
           <div className="h-full w-full bg-slate-800/60  flex flex-col px-2  justify-center pb-10">
             <About />

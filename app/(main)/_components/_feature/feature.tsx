@@ -1,3 +1,4 @@
+import AnimationOnScroll from "@/components/animation-on-scroll";
 import { cn } from "@/lib/utils";
 
 interface FeatureProps {
@@ -12,7 +13,15 @@ const Feature = ({ title, icon, description }: FeatureProps) => {
       className="border border-sky-800/30 rounded-md bg-gradient-to-br from-sky-100/40 to-neutral-100/30 
 h-[200px] w-[200px] flex items-center justify-evenly p-2 flex-col shadow-md"
     >
-      <div className={cn("flex items-center justify-center h-[30%] ","animate-flip-up animate-once animate-ease-in ")}>{icon}</div>
+      <div className="flex items-center justify-center h-[30%] ">
+        <AnimationOnScroll
+          classNameInView="animate-flip-up animate-once animate-ease-in "
+          classNameNotInView=""
+        >
+          {icon}
+        </AnimationOnScroll>
+      </div>
+
       <div className="flex flex-col  justify-start gap-2 h-[70%] ">
         <h3 className="text-xl font-sans text-slate-800  text-center font-bold">
           {title}

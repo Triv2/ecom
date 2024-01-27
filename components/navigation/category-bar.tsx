@@ -41,7 +41,7 @@ const CategoryBar = ({
 
 }:CategoryBarProps) => {
   return (
-<section className="flex items-center  h-[50px] justify-center w-full gap-2  bg-gradient-to-b  from-slate-900/80 via-slate-800/80 to-slate-800/90 shadow-lg">
+<section className="flex items-center md:flex-row flex-col  md:h-[50px] justify-center w-full gap-2  md:bg-gradient-to-b  md:from-slate-900/80 md:via-slate-800/80 md:to-slate-800/90 md:shadow-lg">
 {categories.map(category => (
   <Button variant="nav"key={category.value} className="flex flex-col items-center  p-2 rounded-md text-sm ">
     {category.label}
