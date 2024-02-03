@@ -13,6 +13,9 @@ import { ProductFeatures } from "@/components/product/product-features";
 import Header from "@/components/header";
 import ProductList from "@/components/product/product-list";
 import { CategoryList } from "@/components/categories/category-list";
+import { Categories } from "@/components/categories/categories";
+import { Incentives } from "@/components/categories/incentives";
+import { Promo } from "@/components/categories/promo";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -44,7 +47,9 @@ const LandingPage = async () => {
               imageUrl="/landing/work1.webp"
             />
             <ProductList title="Best Selling Products" />
-            <CategoryList title="Our Collections" />
+            <CategoryList title="Browse our shop!"/>
+            <Incentives/>
+            <Promo/>
           </div>
         </div>
       </section>
