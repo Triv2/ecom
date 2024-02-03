@@ -1,33 +1,127 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 interface HeaderProps {
-  title:string;
-  description:string;
-  imageUrl:string;
+  title: string;
+  description: string;
+  imageUrl: string;
 }
 
+const font = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 // const headingFont=localFont({
 //   src:"",
 // });
 
-
-const Header = ({
-  title,
-  description,
-  imageUrl,
-}:HeaderProps) => {
+const Header = ({ title, description, imageUrl }: HeaderProps) => {
   return (
-<div className=" flex flex-col md:flex-row items-center justify-center w-full h-auto px-10 py-4 pl-10 pt-14  bg-slate-900/80">
-  <Image src={imageUrl} alt={imageUrl} width={250} height={250} className="opacity-90 md:w-[15%]"/>
-  <div className="flex justify-center  flex-col gap-2 md:w-[40%] p-2">
-  <h1 className={cn("text-3xl md:text-6xl tracking-widest text-center text-emerald-400 sm:text-start font-bold",
-  //headingFont.className
-  )}>{title}</h1>
-    <p className="text-lg text-purple-400 pl-2">{description}</p>
-  </div>
+    <div className="relative  w-full h-full overflow-hidden  xl:overflow-visible rounded-md">
+      <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
+        <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+          <div className="sm:max-w-lg">
+            <h1 className={cn("text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl", font.className)}>
+              {title}
+            </h1>
+            <p className="mt-4 text-xl text-gray-500">
+              {description}
+            </p>
+          </div>
+          <div>
+            <div className="mt-10">
+              {/* Decorative image grid */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
+              >
+                <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                  <div className="flex items-center space-x-6 lg:space-x-8">
+                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100  border shadow-2xl">
+                        <Image
+                        height={150}
+                        width={150}
+                          src={imageUrl}
+                          alt=""
+                          className="h-full w-full object-cover object-center "
+                        />
+                      </div>
+                      <div className="h-64 w-44 overflow-hidden rounded-lg shadow-2xl border">
+                        <Image
+                        height={150}
+                        width={150}
+                        src={imageUrl}
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div className="h-64 w-44 overflow-hidden rounded-lg shadow-2xl border">
+                        <Image
+                        height={150}
+                        width={150}
+                        src={imageUrl}
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                      <div className="h-64 w-44 overflow-hidden rounded-lg shadow-2xl border">
+                        <Image
+                        height={150}
+                        width={150}
+                        src={imageUrl}
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                      <div className="h-64 w-44 overflow-hidden rounded-lg shadow-2xl border">
+                        <Image
+                        height={150}
+                        width={150}
+                        src={imageUrl}
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div className="h-64 w-44 overflow-hidden rounded-lg shadow-2xl border">
+                        <Image
+                        height={150}
+                        width={150}
+                        src={imageUrl}
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                      <div className="h-64 w-44 overflow-hidden rounded-lg shadow-2xl border">
+                        <Image
+                        height={150}
+                        width={150}
+                        src={imageUrl}
+                          alt=""
+                          className="h-full w-full object-cover object-center"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-</div>
+              <a
+                href="#"
+                className="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+              >
+                Shop Collection
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-}
+};
 export default Header;

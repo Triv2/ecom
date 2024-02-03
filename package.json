@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^4.29.4",
+    "@headlessui/react": "^1.7.18",
+    "@heroicons/react": "^2.1.1",
     "@hookform/resolvers": "^3.3.4",
     "@prisma/client": "^5.8.1",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -19,6 +21,7 @@
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-popover": "^1.0.7",
     "@radix-ui/react-slot": "^1.0.2",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "cmdk": "^0.2.0",

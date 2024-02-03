@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      gridTemplateRows: {
+        '[auto,auto,1fr]': 'auto auto 1fr',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -74,7 +77,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("tailwindcss-animated"), require('@tailwindcss/forms')],
+  plugins: [require("tailwindcss-animate"), require("tailwindcss-animated"), require('@tailwindcss/forms'), require('@tailwindcss/aspect-ratio')],
 } satisfies Config
 
 export default config

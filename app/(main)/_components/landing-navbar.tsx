@@ -13,6 +13,7 @@ import FilterBar from "@/components/navigation/filterbar";
 import { UserNav } from "@/components/navigation/user-nav";
 import MobileCategoryBar from "@/components/navigation/mobile-categorybar";
 import MobileFilterBar from "@/components/navigation/mobile-filterbar";
+import { ChevronDown } from "lucide-react";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -81,20 +82,23 @@ const LandingNavbar = async () => {
           </div>
         )}
       </nav>
-      <section className="md:flex  hidden z-10">
-        <CategoryBar />
-      </section>
-      <section className="flex md:hidden">
-        <MobileCategoryBar />
-      </section>
+      
+      <div className={cn("hidden")}>
+        <section className="md:flex  hidden z-10">
+          <CategoryBar />
+        </section>
+        <section className="flex md:hidden">
+          <MobileCategoryBar />
+        </section>
 
-      <div className="md:px-10 rounded-b-md">
-      <section className="md:flex  hidden z-10">
-        <FilterBar />
-      </section>
-      <section className="flex md:hidden">
-        <MobileFilterBar />
-      </section>
+        <div className="md:px-10 rounded-b-md">
+          <section className="md:flex  hidden z-10">
+            <FilterBar />
+          </section>
+          <section className="flex md:hidden">
+            <MobileFilterBar />
+          </section>
+        </div>
       </div>
     </div>
   );
