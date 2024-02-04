@@ -78,12 +78,10 @@ export function Searchbar() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[30%] h-[60%] bg-gradient-to-b from-neutral-900/80 to-slate-900/90 text-sky-400 hover:text-sky-300 border-0 shadow-md hover:bg-slate-800"
+          className=" h-[60%] bg-gradient-to-b flex items-center justify-center from-neutral-100/50 to-slate-100/50 text-slate-900 hover:text-slate-500 border-0 shadow-md hover:bg-slate-100"
         >
-          {value
-            ? options.find((option) => option.value === value)?.label
-            : "Search"}
-          <Search className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          
+          <Search className="h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-full p-0  border-0">

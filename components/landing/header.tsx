@@ -113,7 +113,7 @@ const Header = ({ title, description, imageUrl }: HeaderProps) => {
 
               <a
                 href="#"
-                className="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                className="inline-block rounded-md border border-transparent bg-gradient-to-b from-sky-500 to-blue-600 shadow-2xl px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
               >
                 Shop Collection
               </a>

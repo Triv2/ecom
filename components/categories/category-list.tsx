@@ -1,5 +1,16 @@
 import Image from "next/image";
 import CategoryCard from "./category-card";
+import * as React from "react";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+// Don't want too many best selling products. Limiting this to 3 sets of 3.
 
 const callouts = [
   {
@@ -27,6 +38,7 @@ const callouts = [
   },
 ];
 
+
 interface CategoryListProps {
   title: string;
 }
@@ -38,19 +50,31 @@ export const CategoryList = ({ title }: CategoryListProps) => {
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">
           {title}
         </h2>
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full max-w-sm"
+        >
+          <CarouselContent>
+            <div className="mt-6 flex flex-wrap items-center justify-evenly gap-2 gap-y-10 gap-x-8 h-full w-full">
+              {callouts.map((callout, index:number) => (
+                
+               <CategoryCard
+                  key={callout.name}
+                  name={callout.name}
+                  imageSrc={callout.imageSrc}
+                  imageAlt={callout.imageAlt}
+                  description={callout.description}
+                  href={callout.href}
+                />
 
-        <div className="mt-6 flex flex-wrap items-center justify-evenly gap-2 gap-y-10 gap-x-8 h-full w-full">
-          {callouts.map((callout) => (
-            <CategoryCard
-              key={callout.name}
-              name={callout.name}
-              imageSrc={callout.imageSrc}
-              imageAlt={callout.imageAlt}
-              description={callout.description}
-              href={callout.href}
-            />
-          ))}
-        </div>
+              ))}
+            </div>
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );

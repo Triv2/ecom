@@ -42,10 +42,10 @@ export const Incentives = () => {
                 don't actually read it.
               </p>
             </div>
-            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100">
+            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100 shadow-xl border">
               <Image
-                width={150}
-                height={150}
+                width={1500}
+                height={1500}
                 src="/landing/work1.webp"
                 alt=""
                 className="object-cover object-center"
@@ -59,7 +59,7 @@ export const Incentives = () => {
                   <Image
                     width={150}
                     height={150}
-                    className="h-16 w-16"
+                    className="h-16 w-16 rounded-md shadow-xl"
                     src={incentive.imageSrc}
                     alt=""
                   />
