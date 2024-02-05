@@ -16,8 +16,8 @@ export const Promo = () => {
       <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center rounded-md">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Long-term thinking</h2>
         <p className="mt-3 text-xl text-white">
-          We're committed to responsible, sustainable, and ethical manufacturing. Our small-scale approach allows us to
-          focus on quality and reduce our impact. We're doing our best to delay the inevitable heat-death of the
+          We are committed to responsible, sustainable, and ethical manufacturing. Our small-scale approach allows us to
+          focus on quality and reduce our impact. We are doing our best to delay the inevitable heat-death of the
           universe.
         </p>
         <a

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Fragment, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import {
@@ -141,7 +141,7 @@ const navigation = {
   ],
 };
 
-function classNames(...classes) {
+function classNames(...classes:string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
@@ -277,7 +277,7 @@ export const Navbar = () => {
                   </Tab.Panels>
                 </Tab.Group>
 
-                <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+                <div className="space-y-6 border-t border-gray-200 px-4 py-6 ">
                   {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root">
                       <a
@@ -330,16 +330,16 @@ export const Navbar = () => {
         </Dialog>
       </Transition.Root>
 
-      <header className="relative bg-white">
+      <header className="relative bg-white w-full">
         <p className="flex h-10 items-center justify-center bg-gradient-to-b from-sky-500 to-blue-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           Get free delivery on orders over $100
         </p>
 
         <nav
           aria-label="Top"
-          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full"
         >
-          <div className="border-b border-gray-200">
+          <div className="border-b border-gray-200 w-full">
             <div className="flex h-16 items-center">
               <button
                 type="button"
@@ -527,9 +527,7 @@ export const Navbar = () => {
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
-                  
-                    <Searchbar/>
-                
+                  <Searchbar />
                 </div>
 
                 {/* Cart */}
@@ -552,4 +550,4 @@ export const Navbar = () => {
       </header>
     </div>
   );
-}
+};

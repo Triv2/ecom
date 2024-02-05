@@ -23,8 +23,8 @@ const ProductCard = ({
 
 }: ProductCardProps) => {
   return (
-    <div className="group relative">
-      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 aspect-none group-hover:opacity-75 h-80 shadow-lg border">
+    <div className="group relative ">
+      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 aspect-none group-hover:opacity-75  shadow-lg border">
         <Image
           src={imageSrc}
           alt={imageAlt}

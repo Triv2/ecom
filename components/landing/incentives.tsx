@@ -27,7 +27,7 @@ const incentives = [
 export const Incentives = () => {
   return (
     <div className=" w-full">
-      <div className="mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4">
+      <div className="mx-auto max-w-7xl py-16 sm:px-2 sm:py-24 lg:px-4">
         <div className="mx-auto max-w-2xl px-4 lg:max-w-none">
           <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
             <div>
@@ -39,10 +39,10 @@ export const Incentives = () => {
                 lot more money if we kinda stopped caring about that. Our new
                 strategy is to write a bunch of things that look really good in
                 the headlines, then clarify in the small print but hope people
-                don't actually read it.
+                dont actually read it.
               </p>
             </div>
-            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100 shadow-xl border">
+            <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100 shadow-2xl border">
               <Image
                 width={1500}
                 height={1500}

@@ -1,23 +1,20 @@
 import { currentUser } from "@clerk/nextjs";
 import { Poppins } from "next/font/google";
 
-import LandingNavbar from "./_components/landing-navbar";
 import { Footer } from "../../components/footer/footer";
 
 import { cn } from "@/lib/utils";
 
-import DividerThree from "./_components/_dividers/divider_three";
-
-import { ProductQuickView } from "@/components/product/product-quickview";
-import { ProductFeatures } from "@/components/product/product-features";
 import Header from "@/components/landing/header";
 import ProductList from "@/components/product/product-list";
 import { CategoryList } from "@/components/categories/category-list";
-import { Categories } from "@/components/categories/categories";
+
 import { Incentives } from "@/components/landing/incentives";
 import { Promo } from "@/components/landing/promo";
 import { Navbar } from "@/components/navigation/navbar/navbar";
-
+import SaleCard from "@/components/sales/sale-card";
+import StatBanner from "./_components/_stats/stat-banner";
+import SaleStatBanner from "@/components/sales/sale-stat-banner";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -41,19 +38,25 @@ const LandingPage = async () => {
             Sale Banner
           </h2>
 
-          <div className="flex items-center flex-col  w-full">
+          <div className="flex items-center flex-col w-full">
             <Header
               title="Spring is here!"
               description="This year, our new spring collection will shelter you from the harsh elements of a world. 
                   A world that should be a better place for you. Help us help you make it so."
               imageUrl="/landing/work1.webp"
             />
-            <div className="flex flex-col md:flew-row items-center justify-center">
-            <ProductList title="Best Selling Products" />
-            <CategoryList title="Browse our shop!"/>
-            </div>
-            <Incentives/>
-            <Promo/>
+            <section className="grid sm:grid-cols-2 mt-10 gap-5">
+              <article className="flex flex-col gap-20 px-10 justify-center">
+                <ProductList title="Best Selling Products" />
+
+                <CategoryList title="Browse our shop!" />
+              </article>
+              <article>
+                <SaleStatBanner/>
+              </article>
+            </section>
+            <Incentives />
+            <Promo />
           </div>
         </div>
       </section>
