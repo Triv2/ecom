@@ -85,13 +85,13 @@ export function Searchbar() {
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-full p-0  border-0">
-        <Command className=" bg-gradient-to-tl from-slate-200/40 to-slate-200/60 flex items-center gap-2 text-sky-500 bg-opacity-50">
-          <CommandInput placeholder="..." className="h-9 text-slate-800 placeholder:text-sky-600" />
-          <CommandEmpty className="text-sky-500 text-sm p-4">No results found.</CommandEmpty>
+        <Command className=" bg-gradient-to-tl from-slate-100/40 to-slate-100/60 flex items-center gap-2 text-slate-800 bg-opacity-50">
+          <CommandInput placeholder="..." className="h-9 text-slate-800 placeholder:text-slate-600" />
+          <CommandEmpty className="text-slate-500 text-sm p-4">No results found.</CommandEmpty>
           <CommandGroup  >
             {options.map((option) => (
               <CommandItem
-                className={" truncate text-sky-500 aria-selected:bg-sky-500/40 aria-selected:text-blue-900/80"}
+                className={" truncate text-slate-500 aria-selected:bg-blue-200/40 aria-selected:text-slate-900/80"}
                 key={option.value}
                 value={option.value}
                 onSelect={(currentValue:any) => {

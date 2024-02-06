@@ -10,12 +10,15 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { Searchbar } from "../searchbar";
+import CurrencySwitcher from "./currency-switcher";
 
 const navigation = {
   categories: [
     {
-      id: "women",
-      name: "Women",
+      id: "category1",
+      name: "Category 1",
+      href: "/category1",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
       featured: [
         {
           name: "New Arrivals",
@@ -36,8 +39,8 @@ const navigation = {
       ],
       sections: [
         {
-          id: "clothing",
-          name: "Clothing",
+          id: "subcategory1",
+          name: "Subcategory 1",
           items: [
             { name: "Tops", href: "#" },
             { name: "Dresses", href: "#" },
@@ -51,8 +54,8 @@ const navigation = {
           ],
         },
         {
-          id: "accessories",
-          name: "Accessories",
+          id: "subcategory2",
+          name: "Subcategory 2",
           items: [
             { name: "Watches", href: "#" },
             { name: "Wallets", href: "#" },
@@ -76,8 +79,10 @@ const navigation = {
       ],
     },
     {
-      id: "men",
-      name: "Men",
+      id: "category2",
+      name: "Category 2",
+      href: "/category2",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
       featured: [
         {
           name: "New Arrivals",
@@ -98,8 +103,8 @@ const navigation = {
       ],
       sections: [
         {
-          id: "clothing",
-          name: "Clothing",
+          id: "subcategory1",
+          name: "Subcategory 1",
           items: [
             { name: "Tops", href: "#" },
             { name: "Pants", href: "#" },
@@ -111,8 +116,8 @@ const navigation = {
           ],
         },
         {
-          id: "accessories",
-          name: "Accessories",
+          id: "subcategory2",
+          name: "Subcategory 2",
           items: [
             { name: "Watches", href: "#" },
             { name: "Wallets", href: "#" },
@@ -134,14 +139,75 @@ const navigation = {
         },
       ],
     },
+    {
+      id: "category3",
+      name: "Category 3",
+      href: "/category3",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid",
+      featured: [
+        {
+          name: "New Arrivals",
+          href: "#",
+          imageSrc:
+            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
+          imageAlt:
+            "Models sitting back to back, wearing Basic Tee in black and bone.",
+        },
+        {
+          name: "Basic Tees",
+          href: "#",
+          imageSrc:
+            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
+          imageAlt:
+            "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
+        },
+      ],
+      sections: [
+        {
+          id: "subcategory1",
+          name: "Subcategory 1",
+          items: [
+            { name: "Tops", href: "#" },
+            { name: "Dresses", href: "#" },
+            { name: "Pants", href: "#" },
+            { name: "Denim", href: "#" },
+            { name: "Sweaters", href: "#" },
+            { name: "T-Shirts", href: "#" },
+            { name: "Jackets", href: "#" },
+            { name: "Activewear", href: "#" },
+            { name: "Browse All", href: "#" },
+          ],
+        },
+        {
+          id: "subcategory2",
+          name: "Subcategory 2",
+          items: [
+            { name: "Watches", href: "#" },
+            { name: "Wallets", href: "#" },
+            { name: "Bags", href: "#" },
+            { name: "Sunglasses", href: "#" },
+            { name: "Hats", href: "#" },
+            { name: "Belts", href: "#" },
+          ],
+        },
+        {
+          id: "brands",
+          name: "Brands",
+          items: [
+            { name: "Full Nelson", href: "#" },
+            { name: "My Way", href: "#" },
+            { name: "Re-Arranged", href: "#" },
+            { name: "Counterfeit", href: "#" },
+            { name: "Significant Other", href: "#" },
+          ],
+        },
+      ],
+    },
   ],
-  pages: [
-    { name: "Company", href: "#" },
-    { name: "Stores", href: "#" },
-  ],
+  pages: [{ name: "Company", href: "/about" }],
 };
 
-function classNames(...classes:string[]) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
@@ -198,7 +264,7 @@ export const Navbar = () => {
                           className={({ selected }) =>
                             classNames(
                               selected
-                                ? "border-indigo-600 text-indigo-600"
+                                ? "border-blue-600 text-blue-600"
                                 : "border-transparent text-gray-900",
                               "flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base font-medium"
                             )
@@ -230,7 +296,7 @@ export const Navbar = () => {
                                   className="object-cover object-center"
                                 />
                               </div>
-                              <a
+                              <Link
                                 href={item.href}
                                 className="mt-6 block font-medium text-gray-900"
                               >
@@ -239,7 +305,7 @@ export const Navbar = () => {
                                   aria-hidden="true"
                                 />
                                 {item.name}
-                              </a>
+                              </Link>
                               <p aria-hidden="true" className="mt-1">
                                 Shop now
                               </p>
@@ -261,12 +327,12 @@ export const Navbar = () => {
                             >
                               {section.items.map((item) => (
                                 <li key={item.name} className="flow-root">
-                                  <a
+                                  <Link
                                     href={item.href}
                                     className="-m-2 block p-2 text-gray-500"
                                   >
                                     {item.name}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
@@ -280,37 +346,37 @@ export const Navbar = () => {
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6 ">
                   {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root">
-                      <a
+                      <Link
                         href={page.href}
                         className="-m-2 block p-2 font-medium text-gray-900"
                       >
                         {page.name}
-                      </a>
+                      </Link>
                     </div>
                   ))}
                 </div>
 
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
-                    <a
-                      href="#"
+                    <Link
+                      href="/sign-in"
                       className="-m-2 block p-2 font-medium text-gray-900"
                     >
                       Sign in
-                    </a>
+                    </Link>
                   </div>
                   <div className="flow-root">
-                    <a
-                      href="#"
+                    <Link
+                      href="/sign-up"
                       className="-m-2 block p-2 font-medium text-gray-900"
                     >
                       Create account
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
                 <div className="border-t border-gray-200 px-4 py-6">
-                  <a href="#" className="-m-2 flex items-center p-2">
+                  <Link href="#" className="-m-2 flex items-center p-2">
                     <Image
                       width={150}
                       height={150}
@@ -322,7 +388,7 @@ export const Navbar = () => {
                       CAD
                     </span>
                     <span className="sr-only">, change currency</span>
-                  </a>
+                  </Link>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
@@ -330,14 +396,14 @@ export const Navbar = () => {
         </Dialog>
       </Transition.Root>
 
-      <header className="relative bg-white w-full">
+      <header className="relative bg-slate-300/20 w-full shadow-xl">
         <p className="flex h-10 items-center justify-center bg-gradient-to-b from-sky-500 to-blue-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           Get free delivery on orders over $100
         </p>
 
         <nav
           aria-label="Top"
-          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full"
+          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full "
         >
           <div className="border-b border-gray-200 w-full">
             <div className="flex h-16 items-center">
@@ -353,16 +419,16 @@ export const Navbar = () => {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <a href="#">
+                <Link href="/">
                   <span className="sr-only">Your Company</span>
                   <Image
                     width={150}
                     height={150}
-                    src="/landing/work1.webp"
-                    className="h-8 w-auto"
+                    src="/logo.png"
+                    className=" h-14 w-auto "
                     alt=""
                   />
-                </a>
+                </Link>
               </div>
 
               {/* Flyout menus */}
@@ -376,7 +442,7 @@ export const Navbar = () => {
                             <Popover.Button
                               className={classNames(
                                 open
-                                  ? "border-indigo-600 text-indigo-600"
+                                  ? "border-blue-600 text-blue-600"
                                   : "border-transparent text-gray-700 hover:text-gray-800",
                                 "relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
                               )}
@@ -402,9 +468,16 @@ export const Navbar = () => {
                               />
 
                               <div className="relative bg-white">
+                              
                                 <div className="mx-auto max-w-7xl px-8">
-                                  <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
+                                <div className="py-5 flex gap-1 pt-10 flex-col">
+                                  <Link className="font-bold text-lg text-slate-900 hover:text-slate-500" href={`/market/${category.href}`}>
+                                  {category.name} Route</Link>
+                                  <p>{category.description}</p>
+                                </div>
+                                  <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-8">
                                     <div className="col-start-2 grid grid-cols-2 gap-x-8">
+                                      
                                       {category.featured.map((item) => (
                                         <div
                                           key={item.name}
@@ -419,7 +492,7 @@ export const Navbar = () => {
                                               className="object-cover object-center"
                                             />
                                           </div>
-                                          <a
+                                          <Link
                                             href={item.href}
                                             className="mt-6 block font-medium text-gray-900"
                                           >
@@ -428,7 +501,7 @@ export const Navbar = () => {
                                               aria-hidden="true"
                                             />
                                             {item.name}
-                                          </a>
+                                          </Link>
                                           <p
                                             aria-hidden="true"
                                             className="mt-1"
@@ -457,12 +530,12 @@ export const Navbar = () => {
                                                 key={item.name}
                                                 className="flex"
                                               >
-                                                <a
+                                                <Link
                                                   href={item.href}
                                                   className="hover:text-gray-800"
                                                 >
                                                   {item.name}
-                                                </a>
+                                                </Link>
                                               </li>
                                             ))}
                                           </ul>
@@ -480,49 +553,38 @@ export const Navbar = () => {
                   ))}
 
                   {navigation.pages.map((page) => (
-                    <a
+                    <Link
                       key={page.name}
                       href={page.href}
                       className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
                     >
                       {page.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </Popover.Group>
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <a
-                    href="#"
+                  <Link
+                    href="/sign-in"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800"
                   >
                     Sign in
-                  </a>
+                  </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a
-                    href="#"
+                  <Link
+                    href="/sign-up"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800"
                   >
                     Create account
-                  </a>
+                  </Link>
                 </div>
 
+
+                {/* Change Currency */}
                 <div className="hidden lg:ml-8 lg:flex">
-                  <Link
-                    href="#"
-                    className="flex items-center text-gray-700 hover:text-gray-800"
-                  >
-                    <Image
-                      width={150}
-                      height={150}
-                      src="/landing/work1.webp"
-                      alt=""
-                      className="block h-auto w-5 flex-shrink-0"
-                    />
-                    <span className="ml-3 block text-sm font-medium">CAD</span>
-                    <span className="sr-only">, change currency</span>
-                  </Link>
+                  <CurrencySwitcher/>
                 </div>
 
                 {/* Search */}
@@ -532,7 +594,7 @@ export const Navbar = () => {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <a href="#" className="group -m-2 flex items-center p-2">
+                  <Link href="/cart" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                       aria-hidden="true"
@@ -541,7 +603,7 @@ export const Navbar = () => {
                       0
                     </span>
                     <span className="sr-only">items in cart, view bag</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
